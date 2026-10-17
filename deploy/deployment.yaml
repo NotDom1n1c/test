@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: __APP__
+  name: test
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app.kubernetes.io/name: __APP__
+      app.kubernetes.io/name: test
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: __APP__
+        app.kubernetes.io/name: test
     spec:
       securityContext:
         runAsNonRoot: true

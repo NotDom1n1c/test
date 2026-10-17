@@ -29,8 +29,8 @@ jobs:
       - name: Personalized yet?
         id: guard
         run: |
-          # a fresh copy of a template still says __APP__ until the portal personalizes it
-          if grep -rqs "__APP__" deploy/; then
+          # a fresh copy of a template still says test until the portal personalizes it
+          if grep -rqs "test" deploy/; then
             echo "ready=false" >> "$GITHUB_OUTPUT"; echo "Template placeholders found, delivery is skipped."
           else
             echo "ready=true" >> "$GITHUB_OUTPUT"
