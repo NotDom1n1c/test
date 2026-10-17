@@ -11,4 +11,4 @@ labels:
 images:
   - name: app-image
     newName: ghcr.io/notdom1n1c/test
-    newTag: latest
+    newTag: sha-c61c5c4
